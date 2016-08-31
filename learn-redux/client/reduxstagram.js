@@ -9,6 +9,9 @@ import css from './styles/style.styl';
 import Main from './components/Main';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';

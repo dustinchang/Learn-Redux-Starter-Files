@@ -4,6 +4,7 @@
 // 2. copy of current state
 
 function posts(state = [], action) {
+  console.log('The post wil change!');
   console.log(state, action);
   return state;
 }

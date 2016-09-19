@@ -1,8 +1,8 @@
 // increment
 export function increment(index) {
-  return {
-    type: 'INCREMENT_LIKES',
-    index
+  return { //An Action is just an object with some info of:
+    type: 'INCREMENT_LIKES', // What happened
+    index // And what needs to change
   }
 }
 

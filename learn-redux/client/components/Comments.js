@@ -1,10 +1,28 @@
 import React from 'react';
 
 const Comments = React.createClass({
+  renderComment(comment, index) {
+    console.log(comment);
+    return (
+      <div className='comment' key={index}>
+        <p>
+          <strong>{comment.user}</strong>
+          {comment.text}
+          <button className='remove-comment'>&times;</button>
+        </p>
+
+      </div>
+    )
+  },
   render() {
     return (
-      <div className="comment">
-        I'm a Comment!!
+      <div className="comments">
+        {this.props.postComments.map(this.renderComment)}
+        <form ref='commentForm' className="comment-form">
+          <input type="text" ref='author' placeholder='author'></input>
+          <input type="text" ref='comment' placeholder='comment'></input>
+          <input type='submit' hidden></input> {/*hidden for the user to be able to hit submit on enter*/}
+        </form>
       </div>
     )
   }

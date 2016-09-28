@@ -15,6 +15,26 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
+// For tracking, need to sign up for Sentry if to use
+/*import Raven from 'raven-js';
+import { sentry_url, logException } from './data/config';
+
+Raven.config(sentry_url, {
+  tags: {
+    git_commit: 'asdfas9d08f',
+    userLevel: 'editor'
+  }
+}).install();
+
+logException(new Error('download failed!'), {
+  email: 'wesbos@gmail.com'
+});
+
+Raven.captureMessage('something bad happened');
+Raven.showReportDialog(); //After captureMessage or logException
+
+console.log(window.user.doesNotExist);*/
+
 const router = (
   <Provider store={store}>
     <Router history={history}>
